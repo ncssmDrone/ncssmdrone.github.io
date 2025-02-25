@@ -7,14 +7,5 @@ nav:
   - CAD: cad.md
   - Assembly: assembly.md
   - Testing: testing.md
-
-
 theme: material
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
+highlightjs: true
