@@ -3,7 +3,10 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - main
+      - main  # Change this if your working branch is different
+
+permissions:
+  contents: write  # This allows GitHub Actions to push changes
 
 jobs:
   deploy:
@@ -23,5 +26,11 @@ jobs:
           pip install mkdocs-material
 
       - name: Deploy to GitHub Pages
+        env:
+          GIT_USER: github-actions[bot]
+          GIT_EMAIL: github-actions[bot]@users.noreply.github.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdocs gh-deploy --force
+          git config --global user.name "${GIT_USER}"
+          git config --global user.email "${GIT_EMAIL}"
+          mkdocs gh-deploy --force --remote-branch gh-pages
