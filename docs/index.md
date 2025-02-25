@@ -1,7 +1,0 @@
-# NCSSM 2025 TSA UAV Documentation
-
-Welcome to the documentation page for the North Carolina School of Science and Math Durham's UAV drone team for the TSA 2025 competition. Our team consists of Richard Shan, Yitian Yang, James Nguyen, Seungwoo Ji, Alfred Ye, and Muhilan Krishnan.
-
-## Pages
-
-[Ideation](ideation.md)
